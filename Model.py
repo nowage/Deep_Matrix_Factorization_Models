@@ -1,6 +1,6 @@
 # -*- Encoding:UTF-8 -*-
 
-#import tensorflow as tf
+#import tensorflow as tf  
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
@@ -133,10 +133,11 @@ class Model:
         self.sess.run(tf.global_variables_initializer())
 
         self.saver = tf.train.Saver()
-        if os.path.exists(self.checkPoint):
-            [os.remove(f) for f in os.listdir(self.checkPoint)]
-        else:
-            os.mkdir(self.checkPoint)
+        # if os.path.exists(self.checkPoint):
+        #     [os.remove(f) for f in os.listdir(self.checkPoint)]
+        # else:
+        print(self.checkPoint)
+        os.mkdir(self.checkPoint)
 
     def run(self):
         best_hr = -1

@@ -1,0 +1,9 @@
+./checkPoint
+
+
+# for macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+## Icon must end with  \r
+Icon?
